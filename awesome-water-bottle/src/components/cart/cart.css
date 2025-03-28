@@ -1,0 +1,20 @@
+.cart{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    gap: 10px;
+    border: 1px solid white;
+    padding: 10px;
+}
+.cart img{
+    width: 200px;
+}
+.flex{
+    display: flex;
+    flex-direction: column;
+}
+.btn{
+    background-color: white;
+    color: black;
+    border: black;
+    margin: 5px;
+}
