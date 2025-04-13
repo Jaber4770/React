@@ -1,10 +1,11 @@
 import './App.css'
+import NavBar from './components/NavBar/NavBar'
 
 function App() {
 
   return (
     <>
-      <button className="btn btn-xs text-3xl">Xsmall</button>
+      <NavBar></NavBar>
     </>
   )
 }
