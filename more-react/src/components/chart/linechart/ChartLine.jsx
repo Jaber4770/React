@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { use } from 'react';
 import { Bar, BarChart, Line, LineChart, Pie, PieChart, Tooltip, Treemap, XAxis, YAxis } from 'recharts';
 
 
@@ -32,7 +32,9 @@ const salesData = [
 ]
 
 
-const ChartLine = () => {
+const ChartLine = ({ pricingAxiosPromise }) => {
+    const pricingAxiosData = use(pricingAxiosPromise);
+    console.log(pricingAxiosData.data);
     return (
         <div className='my-10'>
             <LineChart width={800} height={500} data={data}>

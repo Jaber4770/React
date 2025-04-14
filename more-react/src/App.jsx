@@ -3,8 +3,11 @@ import './App.css'
 import NavBar from './components/NavBar/NavBar'
 import Pricing from './components/Pricing/Pricing'
 import ChartLine from './components/chart/linechart/ChartLine';
+import axios from 'axios';
 
 const pricingPromise = fetch('pricingData.json').then(res => res.json());
+const pricingAxiosPromise = axios.get('pricingData.json');
+
 
 function App() {
 
@@ -18,7 +21,7 @@ function App() {
         <Suspense fallback={<span className=' loading loading-spinner loading-xl'></span>}>
           <Pricing pricingPromise={pricingPromise}></Pricing>
         </Suspense>
-        <ChartLine></ChartLine>
+        <ChartLine pricingAxiosPromise={pricingAxiosPromise}></ChartLine>
       </main>
       <footer>
 
