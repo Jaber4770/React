@@ -15,8 +15,21 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/category/:id',
-                element: <CategoryNews></CategoryNews>
+                element: <CategoryNews></CategoryNews>,
+                loader: ()=>fetch('/news.json')
             }
-        ]
+        ],
     },
+    {
+        path: '/auth',
+        element:<h1>Authentication page</h1>
+    },
+    {
+        path: '/news',
+        element: <h1>News Layout</h1>
+    },
+    {
+        path: '/*',
+        element:<h1>404</h1>
+    }
 ]);
